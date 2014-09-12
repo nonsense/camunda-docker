@@ -12,4 +12,8 @@ RUN chmod +x /opt/camunda-7.2.0-alpha4/start.sh
 
 RUN cd /opt/camunda-7.2.0-alpha4 && unzip camunda-bpm-tomcat-7.2.0-alpha4.zip
 
+ADD tomcat-users.xml /opt/camunda-7.2.0-alpha4/server/apache-tomcat-7.0.50/conf/tomcat-users.xml
+
+RUN chmod 755 /opt/camunda-7.2.0-alpha4/server/apache-tomcat-7.0.50/conf/tomcat-users.xml
+
 CMD cd /opt/camunda-7.2.0-alpha4/ && /bin/sh -c ./start.sh
