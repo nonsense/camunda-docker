@@ -4,7 +4,7 @@ RUN apt-get install unzip
 
 RUN mkdir -p /opt/camunda-7.2.0-alpha4
 
-ADD camunda-bpm-tomcat-7.2.0-alpha4.zip /opt/camunda-7.2.0-alpha4/camunda-bpm-tomcat-7.2.0-alpha4.zip
+RUN cd /opt/camunda-7.2.0-alpha4 && wget http://camunda.org/release/camunda-bpm/tomcat/7.2/camunda-bpm-tomcat-7.2.0-alpha4.zip
 
 ADD start.sh /opt/camunda-7.2.0-alpha4/start.sh
 
