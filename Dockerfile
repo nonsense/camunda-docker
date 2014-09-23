@@ -16,4 +16,6 @@ ADD tomcat-users.xml /opt/camunda-7.2.0-alpha4/server/apache-tomcat-7.0.50/conf/
 
 RUN chmod 755 /opt/camunda-7.2.0-alpha4/server/apache-tomcat-7.0.50/conf/tomcat-users.xml
 
+RUN echo "ntpdate ntp.ubuntu.com" > /etc/cron.daily/ntpdate && chmod 755 /etc/cron.daily/ntpdate
+
 CMD cd /opt/camunda-7.2.0-alpha4/ && /bin/sh -c ./start.sh

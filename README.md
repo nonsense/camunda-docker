@@ -7,7 +7,7 @@ This Dockerfile is based on `torstenek/camunda` image. It was easier to update t
 
 In order to run Camunda:
 
-`docker run -i -p 3001:8080 -t nonsense/camunda-7.2.0-alpha4`
+`docker run -i -p 3001:8080 -t nonsens3/camunda` currently camunda-7.2.0-alpha4
 
 In order to inspect the running docker container:
 
